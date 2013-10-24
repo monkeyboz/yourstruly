@@ -1,0 +1,230 @@
+<style>
+	body{
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 11px;
+		margin: 0px;
+	}
+	label{
+		width: 150px;
+		text-align: right;
+		float: left;
+		margin-right: 10px;
+	}
+	.removeGallery{
+		background: #000;
+		padding: 10px;
+		clear: both;
+		margin-bottom: 5px;
+		display: block;
+		color: #fff;
+		text-decoration: none;
+	}
+	.formHolder{
+		margin-top: 10px;
+	}
+	.sectionHolder{
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 3px solid #333;
+	}
+	#sectionSelector{
+		display: block;
+		clear: both;
+		margin-bottom: 10px;
+		overflow: hidden;
+	}
+	#sectionSelector a{
+		text-decoration: none;
+		display: block;
+		float: left;
+		background-image: linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		background-image: -o-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.05, rgb(255,255,255)),
+			color-stop(1, rgb(240,240,240))
+		);
+		padding: 5px;
+		color: #333;
+		font-weight: bold;
+		margin-right: 10px;
+		border-radius: 5px;
+		width: 112px;
+		height: 112px;	
+	}
+	.deselect{
+		color: #ababab;	
+	}
+	.clear{
+		clear: both;	
+	}
+	#choose{
+		font-family: Verdana, Geneva, sans-serif;
+		text-transform: uppercase;
+		background-image: linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -o-linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -moz-linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -webkit-linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -ms-linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(10,25,36)),
+			color-stop(1, rgb(89,89,89))
+		);
+		padding: 20px 10px;
+		border-top: 1px solid #333;
+		border-bottom: 1px solid #333;
+		color: #fff;
+		font-weight: bold;
+	}
+	#sectionSelector{
+		background-image: linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		background-image: -o-linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		background-image: -moz-linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		background-image: -webkit-linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		background-image: -ms-linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(88,148,20)),
+			color-stop(1, rgb(183,224,56))
+		);
+		padding: 10px;
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;	
+	}
+	input, textarea{
+		width: 60%;
+	}
+	#hideSections{
+		padding: 10px;
+		background: #000;
+		color: #fff;
+	}
+</style>
+<form action="?step=3&layout=[layouts]" method="POST" enctype="multipart/form-data">
+	<div id="choose">Choose a section to add to the layout</div>
+	<div id="hideSections">Hide Sections Menu</div>
+    <div id="sectionSelector">
+    	[sections]
+        <div class="clear"></div>
+    </div>
+	<div style="padding: 10px; border-bottom: 3px solid #525252;">
+		<label>Logo</label>
+		<input type="file" name="logo" />
+	</div>
+	<div id="sectionsHolder">[edit_sections]</div>
+	<input type="hidden" name="layout" value="[layout]"/>
+	<div style="padding: 10px; background: #000;"><input type="submit" name="submit" value="submit" /></div>
+</form>
+<script>
+	var sectionCount = 0;
+	var currSection = 0;
+	
+	$.fn.hideSections = function(){
+		var sectionsOpen = 'true';
+		$(this).click(function(){
+			if(sectionsOpen == 'true'){
+				$('#sectionSelector').stop().animate({'height':'0px', 'opacity':0}, 500);
+				sectionsOpen = 'false';
+			} else {
+				$('#sectionSelector').stop().animate({'height':'120px', 'opacity':1}, 500);
+				sectionsOpen = 'true';
+			}
+		})
+	}
+	
+	$('#hideSections').hideSections();
+	
+	$.fn.sectionSelect = function(){
+		if($(this).data('deselect') != 'true'){
+			$(this).data('deselect', 'false');
+		}
+		
+		++sectionCount;
+		
+		$(this).click(function(){
+			if($(this).data('deselect') != 'true'){
+				var selector = $(this);
+				selector.stop().animate({opacity:.5}, 500);
+				selector.html(currSection = ++currSection);
+				$('#sectionsHolder').append('<div id="'+selector.attr('ref')+'" class="sectionHolder"><img src="images/preloader.gif"/></div>');
+				selector.data('deselect', 'true');
+				selector.addClass('deselect');
+				$.ajax({
+					url: $(this).attr('href')+'&layout=[layouts]&ajax=1',
+					success: function(html){
+						$('#sectionsHolder').find('#'+selector.attr('ref')).html(html);
+					}
+				})
+			} else {
+				var selector = $(this);
+				$('#sectionsHolder').find('#'+$(this).attr('ref')).remove();
+				selector.stop().animate({opacity:1}, 500);
+				selector.html('');
+				currSection = --currSection;
+				$('#sectionSelector a').each(function(){
+					var thisCount = $(this).html();
+					if(thisCount >= selector.html()){
+						thisCount = --thisCount;
+						if(thisCount >= 1) $(this).html(thisCount);
+					}
+				})
+				selector.data('deselect', 'false');
+				selector.removeClass('deselect');
+			}
+			return false;
+		})
+	}
+	
+	$.fn.addSlider = function(){
+		$(this).click(function(){
+			var sliderClick = $(this);
+			$.ajax({
+				url: '?step=getSlider&ajax=1',
+				success: function(html){
+					sliderClick.parent().append(html)
+				}
+			})
+			return false;
+		})
+	}
+	
+	$.fn.addGallery = function(){
+		$(this).click(function(){
+			var galleryClick = $(this);
+			$.ajax({
+				url: '?step=getGallery&gallery='+$(this).attr('ref')+'&ajax=1',
+				success: function(html){
+					galleryClick.parent().append(html);
+				}
+			})
+			return false;
+		})
+	}
+	
+	$.fn.removeGallery = function(){
+		$(this).click(function(){
+			var galleryClick = $(this);
+			galleryClick.parent().remove();
+			return false;
+		})
+	}
+	
+	$('#sectionSelector').find('a').each(function(){ $(this).sectionSelect(); });
+	$('.addBullets').click(function(){
+		$(this).parent().append($(this).parent().find('input').clone().wrap('<p>').parent().html());
+		return false;
+	})
+</script>
+[section_selector]

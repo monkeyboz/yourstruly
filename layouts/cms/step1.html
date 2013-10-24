@@ -1,0 +1,215 @@
+<style>
+	body{
+		margin: 0px;
+		font-family: Verdana, Geneva, sans-serif;
+		font-size: 11px;
+	}
+	h2{
+		padding: 20px 10px;
+		border-bottom: #ccc 1px solid;
+		margin: 0px;
+		font-family: Verdana, Geneva, sans-serif;
+		text-transform: uppercase;
+		background-image: linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -o-linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -moz-linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -webkit-linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		background-image: -ms-linear-gradient(bottom, rgb(10,25,36) 0%, rgb(89,89,89) 100%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(10,25,36)),
+			color-stop(1, rgb(89,89,89))
+		);
+		color: #fff;
+		font-size: 13px;
+	}
+	.iphone{ 
+		height: 560px;
+		width: 300px;
+		overflow: hidden;
+		margin-top: 10px;
+		background: url(layouts/images/iphone_device_app.png);
+		margin-left: 200px;
+		border: none;
+		z-index: 99;
+	}
+	#iphoneIframe{
+		border: none;
+		width: 245px; 
+		height: 340px;	
+	}
+	.iframeHolder{
+		position: absolute; 
+		z-index: 100; 
+		top: 200px; 
+		left: 226px;
+	}
+	#rotate{
+		background-image: linear-gradient(bottom, rgb(255,255,255) 35%, rgb(237,237,237) 68%);
+		background-image: -o-linear-gradient(bottom, rgb(255,255,255) 35%, rgb(237,237,237) 68%);
+		background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 35%, rgb(237,237,237) 68%);
+		background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 35%, rgb(237,237,237) 68%);
+		background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 35%, rgb(237,237,237) 68%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.35, rgb(255,255,255)),
+			color-stop(0.68, rgb(237,237,237))
+		);
+		border-radius: 5px;
+		padding: 5px;
+		font-size: 11px;
+		text-decoration: none;
+		color: #666;
+		margin-right: 10px;
+	}
+	#normalFrame{
+		width: 600px;
+		height: 600px;
+		border: none;
+		margin: 20px;
+		border: 3px solid #000;
+		float: left;
+	}
+	.layouts{
+		padding: 10px;
+		background-image: linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		background-image: -o-linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		background-image: -moz-linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		background-image: -webkit-linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		background-image: -ms-linear-gradient(bottom, rgb(88,148,20) 0%, rgb(183,224,56) 100%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0, rgb(88,148,20)),
+			color-stop(1, rgb(183,224,56))
+		);
+		padding: 10px;
+		border-top: 1px solid #fff;
+		border-bottom: 1px solid #fff;
+	}
+	.layouts a{
+		background-image: linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		background-image: -o-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(240,240,240) 100%);
+		
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.05, rgb(255,255,255)),
+			color-stop(1, rgb(240,240,240))
+		);
+		border-radius: 5px;
+		padding: 5px;
+		font-size: 11px;
+		text-decoration: none;
+		color: #5f9661;
+		margin-right: 10px;
+		border: #a1c4a1 1px solid;
+		display: block;
+		float: left;
+		width: 100px;
+		height: 100px;
+	}
+	.mobile{
+		background: #000;
+		padding: 10px;
+	}
+	.mobile a{
+		font-size: 11px;
+		color: #fff;
+		text-decoration: none;
+	}
+	.clear{
+		clear: both;
+	}
+	.layouts .selected{
+		border: 3px solid #000;
+	}
+	#menu{
+		overflow: hidden;
+	}
+	#displayMenu{
+		padding: 3px;
+		background: #000;
+		color: #fff;
+	}
+</style>
+<h2>Step 1 : Select the Layout</h2>
+<div id="displayMenu">Layout Menu</div>
+<div id="menu">
+	<div class="menu_holder">
+		<div class="layouts">
+			[layouts] <input name="Continue..." type="submit" value="Continue..."/>
+			<div class="clear"></div>
+		</div>
+		<div class="mobile"><a href="?step=mobileView&url=uploads/hertz_layout5.html" target="_blank">Mobile Layout</a></div>
+		<div id="mobiNavHolder"></div>
+		<!-- <div class="iframeHolder">
+			<iframe id="iphoneIframe" src="uploads/hertz_layout5.html"></iframe>
+		</div>
+		<div style="text-align: center;">
+			<div class="iphone"></div>
+		<div> -->
+	</div>
+</div>
+<iframe id="normalFrame" src="uploads/hertz_layout5.html"></iframe>
+<div style="float: left; margin-top: 20px;">
+	<h2>Layout 1</h2>
+	<div style="margin-top: 10px;">Lorem ipsum lorem ipsum.</div>
+</div>
+<script>
+	$('#displayMenu').click(function(){
+		if($('#menu').height() == 0){
+			$('#menu').animate({height:$('#menu .menu_holder').height()+'px', opacity:1}, 500);
+		} else {
+			$('#menu').animate({height:'0px', opacity:0}, 500);
+		}
+	})
+	$('input[name="Continue..."]').click(function(){
+		if(currSelection != ''){
+			window.location = currSelection;
+		} else {
+			$('#error').html('No Layout Selected');
+		}
+		return false;
+	})
+	var currLayout = '';
+	var currSelection = '';
+	$('.mobile a').click(function(){
+		window.open(currLayout, 'true');
+		return false;
+	})
+	$('#rotate').click(function(){
+		if($('#iphoneIframe').height() == '340'){
+			$('#iphoneIframe').css('width', '360px').css('height', '245px');
+			$('.iframeHolder').css('top', '239px').css('left', '160px');
+			$('.iphone').rotate(90);
+		} else {
+			$('#iphoneIframe').css('width', '245px').css('height', '340px');
+			$('.iframeHolder').css('top', '200px').css('left', '226px');
+			$('.iphone').rotate(0);
+		}
+		return false;
+	})
+	$('.layouts a').click(function(){
+		$('.layouts a').each(function(){
+			$(this).removeClass('selected');
+		})
+		$(this).addClass('selected');
+		currLayout = 'layouts/samples/'+$(this).attr('ref')+'.html';
+		currSelection = $(this).attr('href');
+		$('#normalFrame').attr('src', currLayout);
+		return false;
+	})
+</script>

@@ -1,0 +1,422 @@
+	body {
+		color: #525252;
+		font-family: arial;
+		margin: 0;
+		background: url("../images/pattern.png") repeat scroll 0 0 transparent
+		font-size: 11px;
+	}
+	h1, h2, h3, h4 {
+		font-family: arial;
+		font-weight: normal;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		color: #fff;
+	}
+	h2{
+		padding: 10px;
+		background: none repeat scroll 0 0 #474747;
+		display: block;
+		max-width: 50%;
+		text-transform: uppercase;
+		margin-top: 80px;
+		font-size: 20px;
+	}
+	h3{
+		color: #525252;
+		font-weight: bold;
+	}
+	a {
+		color: #F21266;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	.container .subtitle{
+		font-size: 20px;
+		margin-bottom: 15px;
+	}
+	#layout .container{
+		width: 800px;
+		margin: 0px auto;
+	}
+	#layout{
+		background: rgba(255,255,255,.9); 
+		position: fixed; 
+		top: 0px; 
+		width: 100%; 
+		z-index: 100000;
+		border-bottom: #efefef solid 5px;
+		height: 90px;
+		overflow: hidden;
+	}
+	#header{
+		background: rgba(255,255,255,.8); 
+		position: fixed; 
+		top: 0px; 
+		width: 100%; 
+		z-index: 100000;
+		height: 90px;
+		overflow: hidden;
+		border-bottom: 1px solid #E7E7E7;
+	}
+	#contact{
+		clear: both;
+		font-size: 11px;
+		margin-bottom: 10px;
+	}
+	.columnRight p{
+		font-size: 11px;
+	}
+	label{
+		float: left;
+		font-size: 11px;
+		margin: 10px 0;
+		width: 100px;
+		font-weight: bold;
+	}
+	input, textarea{
+		border-radius: 10px;
+		border: 1px solid #ababab;
+		width: 100%;
+		padding: 5px;
+	}
+	.sectionBackground{
+		padding: 10px;
+	}
+	.columnLeft{
+		width: 350px;
+		float: left;
+		margin-right: 20px;
+	}
+	.columnLeft div{
+		clear: both;
+	}
+	.columnRight{
+		width: 300px;
+		float: left;
+	}
+	.overlay{
+		background: #000;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		top: 0px;
+		right: 0px;
+		text-align: center;
+		}.displayImage{
+			margin-top: 40px;
+			position: fixed;
+			top: 0px;
+			width: 100%;
+			text-align: center;
+			z-index: 40000;
+		}.imageRollover{
+			background: #fff;
+			height: 100%;
+			width: auto;
+		}.imageOverlayHolder{
+			overlay: hidden;
+			height: 100%;
+			width: 100%;
+		}
+	#top_nav{
+		background: #900;
+		padding: 10px;
+		}#top_nav a{
+			background: none;
+			font-size: 11px;
+		}
+	.img{
+		width: 100%;
+	}
+	.displayImage .img{
+		border: 10px solid #fff;
+		width: 100%;
+	}
+	.sectionBackground{
+		background: #000;
+		box-shadow: 0 2px 4px #AB40AB;
+	}
+	.subhead{
+		margin-top: 20px;	
+	}
+	#footer {
+		background: none repeat scroll 0 0 #666666;
+		border-top: 1px solid #CCCCCC;
+		bottom: 0;
+		padding: 10px;
+		position: static;
+		width: 100%;
+	}
+	#nav {
+		font-size: 11px;
+		text-align: left;
+		line-height: 90px;
+	}
+	.clear {
+		clear: both;
+	}
+	.one-thirds {
+		font-size: 11px;
+	}
+
+	.slide_img {
+		border-radius: 10px 10px 10px 10px;
+		width: 100%;
+	}
+	.youtube {
+		background: none repeat scroll 0 0 #000000;
+		border: 10px solid #FFFFFF;
+		box-shadow: 0 2px 5px #ABABAB;
+		padding: 10px;
+	}
+	h1 {
+		margin: 0 0 10px;
+	}
+	.tabHolder a {
+		font-family: 'Puritan';
+		padding: 10px;
+	}
+	.imageHolder {
+		background: none repeat scroll 0 0 #000000;
+		border: 10px solid #FFFFFF;
+		height: 175px;
+		margin: 10px auto;
+		overflow: hidden;
+		width: 90%;
+	}
+	.tabContentHolder {
+		background: none repeat scroll 0 0 #FFFFFF;
+		margin-top: 10px;
+		padding: 10px;
+		font-family: arial;
+	}
+	.tabHolder .selected {
+		background: none repeat scroll 0 0 #FFFFFF;
+		color: #ababab;
+	}
+	.tabHolder a {
+		color: #fff;
+		font-weight: bold;
+	}
+	#tabContainer {
+		background: none repeat scroll 0 0 #ABABAB;
+		padding: 20px;
+		margin-top: 20px;
+	}
+	.fixed {
+		position: fixed;
+	}
+	.moreInfo{
+		padding: 10px;
+		background: #333;
+		margin-top: 10px;
+	}
+	#nav a {
+		color: #ababab;
+		font-weight: bold;
+		margin-right: 10px;
+		padding: 10px;
+	}
+	#mobileNav #mobi_button{
+		background: url(../../images/menu.png);
+	}
+	@media all and (min-width:800px) {
+		#mobileNav{
+			display: none;
+		}
+		.slideHolder {
+			height: 390px;
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+		.slideDescript {
+			background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+			border-radius: 10px 10px 10px 10px;
+			bottom: 130px;
+			color: #FFFFFF;
+			font-weight: bold;
+			padding: 30px;
+			position: absolute;
+			right: 30px;
+			width: 200px;
+		}
+		.displayImage img{
+			width: auto;
+		}
+		.slider {
+			border-radius: 10px 10px 10px 10px;
+			clear: both;
+			margin: 50px auto 20px;
+			height: 300px; 
+			margin-top: 140px;
+			overflow: hidden;
+			position: relative;
+			width: 800px;
+			z-index: 0;
+		}
+		#top_wrapper {
+			background-image: -moz-linear-gradient(center bottom , #D9D9D9 0%, #FFFFFF 72%);
+			border-radius: 15px 15px 15px 15px;
+			box-shadow: 0 1px 5px #BACBD3;
+			clear: both;
+			color: #CCCCCC;
+			margin: 0 auto;
+			padding: 20px;
+			text-align: center;
+			max-width: 750px;
+			min-width: 550px;
+			z-index: 1;
+		}
+		#header .container{
+			margin-top: 0px;
+		}
+		#logo {
+			display: block;
+			margin: 10px 0;
+			text-align: center;
+			height: 90px;
+			float: left;
+		}
+		#nav a {
+			display: inline;
+		}
+		.one-thirds {
+			float: left;
+			line-height: 20px;
+			width: 32%;
+		}
+		.middle {
+			margin: 0 2%;
+		}
+		.youtube {
+			clear: both;
+			margin: 0 auto;
+			width: 600px;
+		}
+		#container {
+			margin: 10px;
+			padding-top: 30px;
+			border-bottom: #333;
+			width: 800px;
+			margin: 0px auto;
+			padding-bottom: 50px;
+		}
+	}
+	@media all and (max-width: 799px) and (min-width: 0px) {
+		#mobileNav{
+					display: block;
+					text-align: center;
+					clear: both;
+				}
+				#mobileNav #mobi_button{
+					float: right;
+					height: 43px;
+					margin: -56px 18px;
+					text-align: center;
+					width: 61px;
+					background: #000;
+					border: 1px solid #ababab;
+					border-radius: 10px;
+				}
+				#mobileNav .mobi_nav_layout{
+					background: rgba(255,255,255,.9);
+					border-radius: 3px;
+					margin-top: 10px;
+					width: 200px;
+					margin-left: auto;
+					margin-right: auto;
+					display: none;
+					position: absolute;
+					right: 20px;
+				}
+				#mobileNav .mobi_nav_layout a{
+					display: block;
+					clear: both;
+					padding: 10px;
+					color: #000;
+					font-weight: bold;
+					border-bottom: 1px solid #ababab;
+				}
+				#mobileNav .mobi_nav_layout a:hover{
+					display: block;
+					clear: both;
+					padding: 10px;
+					color: #ababab;
+					font-weight: bold;
+					border-bottom: 1px solid #000;
+				}
+				#header nav ul{
+					display: none;
+				}
+		#logo{
+			margin-left: 20px;
+		}
+		#nav{
+			display: none;
+		}
+		.slideHolder {
+			height: 390px;
+			overflow: hidden;
+			position: absolute;
+			width: 100%;
+		}
+		.slider{
+			border-radius: 10px 10px 10px 10px;
+			clear: both;
+			height: 260px;
+			margin: 90px auto 20px;
+			overflow: hidden;
+			position: relative;
+			width: 91%;
+			z-index: 0;
+		}
+		.slideDescript {
+			background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+			border-radius: 10px 10px 10px 10px;
+			bottom: 130px;
+			color: #FFFFFF;
+			font-weight: bold;
+			padding: 15px;
+			position: absolute;
+			right: 30px;
+			width: 200px;
+			font-size: 12px;
+			text-align: center;
+		}
+		.displayImage img{
+			width: 80%;
+			margin: 0px 20px;
+		}
+		#top_wrapper {
+			background-image: -moz-linear-gradient(center bottom , #D9D9D9 0%, #FFFFFF 72%);
+			border-radius: 15px 15px 15px 15px;
+			box-shadow: 0 1px 5px #BACBD3;
+			clear: both;
+			color: #CCCCCC;
+			margin: 0 auto;
+			padding: 20px;
+			text-align: center;
+			width: 80%;
+			z-index: 100;
+			top: 30px;
+		}
+		#nav a {
+			display: block;
+			padding: 10px;
+		}
+		.one-thirds {
+			width: 100%;
+		}
+		.youtube {
+			
+		}
+		.section{
+			padding: 10px;
+		}
+		#container{
+			width: 100%;
+			padding: 0px;
+		}
+	}

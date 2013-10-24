@@ -1,0 +1,71 @@
+<style>
+	.errors{
+		color: #ff0000;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+	h2{
+		margin: 0px;
+		padding: 0px;
+	}
+	form > div{
+		margin-bottom: 10px;
+	}
+	form{
+		float: left;
+		width: 300px;
+	}
+	.signup_info{
+		width: 50%;
+		float: left;
+	}
+	.signup_info a{
+		font-size: 11px;
+	}
+	.content{
+		margin-top: 20px;
+	}
+	.button{
+		padding: 10px;
+		background: #ff0000;
+		margin-top: 20px;
+		text-decortation: none;
+		display: block;
+	}
+	.button a{
+		color: #fff;
+	}
+	#loginHolder{
+		border-radius: 20px;
+	}
+	.error{
+		font-size: 11px;
+		color: #ff0000;
+	}
+</style>
+<div id="loginHolder">
+	<h2>Login to your account</h2>
+	<div class="errors">[errors]</div>
+	<form action="" method="POST">
+		<div>
+			<label>Username</label>
+			<input type="text" name="username" value="[value_username]"/><span class="error">[error_username]</span>
+		</div>
+		<div>
+			<label>Password</label>
+			<input type="password" name="password" value="[value_password]"/><span class="error">[error_password]</span>
+		</div>
+		<div>
+			<input type="submit" name="submit" value="submit"/>
+		</div>
+	</form>
+	<div class="signup_info">
+		<a href="?step=ForgotPass">Forgot Password</a>
+		<a href="?step=signup">Sign-up</a>
+		<div class="content">
+			Get up to date 1page layouts from Yourstruly.  The one stop shop for all your 1page and mobile layout needs.
+			<div class="button"><a href="?step=signup">Signup Today!</a></div>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>

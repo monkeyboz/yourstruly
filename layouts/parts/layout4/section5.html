@@ -1,0 +1,94 @@
+<div class="sectionBackground">  
+	<div id="contact" class="container clearfix">
+	[anchor_link]
+	<div class="columns sixteen">
+		<h1>[nav_header]</h1>
+		<div class="subhead">[nav_subhead]</div>
+		<br />
+	</div>
+	<!--column 1 starts-->
+	<div class="five columns">
+		<h4>[nav_h4]</h4>
+		[nav_text]
+	</div>
+	<!--column 1 ends-->
+	<!--column 2 starts-->
+	<div class="five columns">
+		<!-- CONTACT FORM STARTS -->
+		<form action="../layout2 - Copy/send.php" id="contact_form" method="post" name="contact_form" />
+			<ul>
+				<li>
+					<label>NAME
+						<span class="required">*</span>
+					</label>
+					<input type="text" name="name" id="name" value="" class="requiredField" />
+				</li>
+				<li>
+					<label>EMAIL
+						<span class="required">*</span>
+					</label>
+					<input type="text" name="email" id="email" value="" class="requiredField email" />
+				</li>
+				<li class="textarea">
+					<label>MESSAGE
+						<span class="required">*</span>
+					</label>
+					<textarea name="message" id="message" rows="20" cols="30"></textarea>
+				</li>
+				<li class="button_form">
+					<input name="submitted" id="submitted" value="Send" class="submit" type="submit" />
+					<input id="reset" type="reset" value="Reset" class="submit" />
+				</li>
+			</ul>
+		</form>
+		<!-- CONTACT FORM ENDS -->
+		<script type="text/javascript">
+			//<![CDATA[
+			$(document).ready(function () {
+				$("#form").validate();
+			});
+			//]]>
+		</script>
+	</div>
+	<!--column 2 ends-->
+	<!--column 3 starts-->
+	<div class="five columns omega">
+		<h4>Your Location &amp; Contact Info</h4>
+		<p>
+			<strong>Email:</strong> <a href="mailto:[email]">[email]</a>
+			<br />
+			<strong>Telephone:</strong> 
+			[phone]<br />
+		</p>
+		<p>[address]</p>
+		<ul id="social">
+			<!-- social icons -->
+			<li>
+				<a href="javascript:void(false)"><img src="../layout2 - Copy/images/social/twitter.png" alt="" /></a>
+			</li>
+			<li>
+				<a href="javascript:void(false)"><img src="../layout2 - Copy/images/social/facebook.png" alt="" /></a>
+			</li>
+			<li>
+				<a href="javascript:void(false)"><img src="../layout2 - Copy/images/social/vimeo.png" alt="" /></a>
+			</li>
+			<li>
+				<a href="javascript:void(false)"><img src="../layout2 - Copy/images/social/googleplus.png" alt="" /></a>
+			</li>
+			<li>
+				<a href="javascript:void(false)"><img src="../layout2 - Copy/images/social/linkedin.png" alt="" /></a>
+			</li>
+			<li>
+				<a href="javascript:void(false)"><img src="../layout2 - Copy/images/social/pinterest.png" alt="" /></a>
+			</li>
+			<li>
+				<a href="javascript:void(false)"><img src="../layout2 - Copy/images/social/flickr.png" alt="" /></a>
+			</li>
+			<li>
+				<a href="javascript:void(false)"><img src="../layout2 - Copy/images/social/instagram.png" alt="" /></a>
+			</li>
+		</ul>
+	</div>
+	<!--column 3 ends-->
+	<div class="clear"></div>
+</div>

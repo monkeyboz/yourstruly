@@ -1,0 +1,4 @@
+<IfModule mod_rewite.c>
+  RewriteEngine On
+  RewriteRule ^/(.*)?$ ./index.php?step=$1 [L]
+</IfModule>

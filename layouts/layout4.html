@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- [description=Clean, layout for very elegant mobile websites.] -->
+<html lang="en">
+	<style type="text/css">
+        .auto-style1 {
+            font-size: 100%;
+        }
+    </style>                
+<head>
+    <meta charset="utf-8" />
+    <title>[layout_title]</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <script src="js/jquery-1.js" type="text/javascript"></script>
+	<script src="js/tabs.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans|Fanwood+Text:400,400italic' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <noscript>
+		<style>
+            .es-carousel ul {display:block;}
+        </style>
+    </noscript>
+</head>
+                    
+<body>
+<div id="logo">
+    <a href="#top_wrapper"><img src="images/[layout_logo]" alt="logo" /></a>
+</div>
+<div id="navigation">
+    <div id="nav" style="text-align: center;">
+		<div class="nav_layout">[layout_navigation]</div>
+        <div class="clear"></div>
+	</div>
+</div>
+<div id="mobileNav">
+	<div class="nav_layout">[layout_navigation]</div>
+</div>
+<div id="container">
+    <div id="sections">
+        [layout_sections]
+    </div>
+    <!--up to top -->
+    <a class="up"></a>
+	</div>
+</div>
+<div id="footer">[layout_footer]</div>
+
+<!--scripts -->
+<script src="js/jquery-1.js" type="text/javascript"></script>
+<script src="js/popupMagic.js" type="text/javascript"></script>
+<script src="js/scrollLayout.js" type="text/javascript"></script>
+<script src="js/mobiNav.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function(){
+		$('.slider').each(function(){ $(this).slider(); })
+		
+		$('#nav a').each(function(){ $(this).scrollNav(120); });
+		$('#top_nav a').each(function(){ $(this).scrollNav(120); });
+		$('#logo a').each(function(){ $(this).scrollNav(400); });
+		$('#mobileNav a').each(function(){ $(this).scrollNav(70); });
+		
+		$('.imageHolder').popupMagic();
+		$('#mobi_button').mobiNav();
+	})
+</script>
+</body>
+</html>

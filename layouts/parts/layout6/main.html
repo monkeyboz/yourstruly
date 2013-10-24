@@ -1,0 +1,492 @@
+			
+        <!-- MENU -->
+        
+        <div id="menu">
+            <div class="container">
+                <h1 class="left">
+                    <a href="index.html" class="logo">
+                        MILLENIUM<b>THEME</b>
+                    </a>
+                </h1>
+                <div class="right">
+                    [layout_navigation]
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+		<div id="mobileNav">
+			<div id="mobi_button"></div>
+			<div style="width: 100%; position: absolute; padding: 10px;">
+				<div class="mobi_nav_layout">
+					[layout_navigation]
+				</div>
+			</div>
+		</div>
+        <script>
+		$(document).ready(function(){
+			$.fn.scrollNav = function(scrollOffset){
+				$(this).click(function(){
+					$('html, body').stop();
+					var offset = $($(this).attr('href')).offset().top-scrollOffset;
+					$('html, body').animate({
+							scrollTop: offset
+						}, 1000);
+					
+					$('.mobi_nav_layout').animate({opacity: 0}, 500, function(){ $(this).css('display', 'none'); });
+					return false;
+				})
+			}
+			$('#menu .container a').each(function(){ $(this).scrollNav(70); });
+			$('.mobi_nav_layout a').each(function(){ $(this).scrollNav(70); });
+		})
+		</script>
+        <!-- HEADER -->
+        
+		<div class="flexslider">
+				<ul class="slides">
+					[slider]
+				</ul>
+			</div>
+        <div id="header">
+			<style>
+				@media screen and (min-width: 800px){
+					.flexslider{
+						display: block;
+						width: 100%;
+						overflow: hidden;
+						height: 460px;
+						margin: 0px auto;
+					}
+					#header .container{
+						display: block;
+					}
+				}
+				@media screen and (max-width: 800px) and (min-width: 0px){
+					.flexslider{
+						display: block;
+						height: 300px;
+						overflow: hidden;
+						margin: 0px auto;
+					}
+					.flexslider ul li{
+						position: absolute;
+					}
+					.flexslider img{
+						width: 100%;
+					}
+					#header .container{
+						display: none;
+					}
+				}
+			</style>
+            
+        </div>
+        
+        <!-- TWITTER -->
+        
+        <div id="twitter">
+            <div class="container">
+                [nav_twitter]
+            </div>
+        </div>
+
+        <!-- WORKS -->
+        
+        <div id="works">
+            <div class="container">
+                
+                <!-- MENU -->
+                
+                <div class="menu">
+                    <ul>
+                        [nav_works1_mult-image]
+                    </ul>
+                </div>
+                
+                <!-- LIST -->
+                
+                <ul class="list">
+                    
+                    <!-- ITEM -->
+                    
+                    [nav_works2_multi-image]
+                
+                <!-- SHOW ALL WORKS -->
+                
+                <div class="all">
+                    <a href="#">
+                        Show all
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SERVICES -->
+        
+        <div id="services">
+            <div class="container">
+                <h2>    
+                    [nav_services_header]
+                </h2>
+                <p>
+                   [nav_services_description]
+                </p>
+                
+                <!-- MENU -->
+                
+                <ul class="menu">
+                    
+                    <!-- ITEM -->
+                    
+                    [nav_services_multi-images]
+                </ul>
+
+                <!-- LIST -->
+                
+                <div class="list">
+                    <span class="arrow left"></span>
+                    <span class="arrow right"></span>
+                    <ul class="items">
+                        
+                        <!-- ITEM -->
+                        
+                        <li>
+                            <a href="data/services/big/webdesign.png"><img src="data/services/big/webdesign.png" alt=""></a>
+                            <h3>
+                                [nav_services_header2]
+                                <span class="spike"></span>
+                            </h3>
+                            <p>
+								[nav_services_description2]
+                            </p>
+                        </li>
+                        
+                        <!-- ITEM -->
+                        
+                        <li>
+                            [nav_services3_multi-images]
+                        </li>
+                        
+                        <!-- ITEM -->
+                        
+                        <li>
+                            <a href="data/services/big/laboratory.png"><img src="data/services/big/laboratory.png" alt=""></a>
+                            <h3>
+                                [nav_services3_header]
+                                <span class="spike"></span>
+                            </h3>
+                            <p>
+                                [nav_services3_description]
+                            </p>
+                        </li>
+                        
+                        <!-- ITEM -->
+                        
+                        <li>
+                            <a href="data/services/big/ios.png"><img src="data/services/big/ios.png" alt=""></a>
+                            <h3>
+                                iOS development
+                                <span class="spike"></span>
+                            </h3>
+                            <p>
+                                He is here. A tremor in the Force. The last time I felt it was in the presence of my old master. Hey, Luke! May the Force be with you. The plans you refer to will.
+                            </p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        Number of works:
+                                    </td>
+                                    <td>
+                                        <span>
+                                            12
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT US -->
+
+        <div id="contact_us">
+            <div class="decoration"></div>
+            <div class="container">
+                <h2>
+                    Do you have special requirements for work?
+                </h2>
+                <a href="#" class="button blue">
+                    Please, contact us!
+                </a>
+            </div>
+        </div>
+        
+        <!-- MEMBERS -->
+
+        <div id="members">
+            <div class="container">
+                <h2>
+                    Who we are?
+                </h2>
+                <p>
+                    We work with forward thinking clients to create beautiful, honest and amazing things that bring positive results.
+                </p>
+                
+                <!-- LIST -->
+                
+                <div class="list">
+                    <span class="arrow left"></span>
+                    <span class="arrow right"></span>
+                    <ul class="items">
+                        
+                        <!-- ITEM -->
+                        
+                        <li>
+                            <a href="data/members/member1.jpg"><img src="data/members/member1.jpg" alt=""></a>
+                            <a href="#"></a>
+                            <h3>
+                                John Doe
+                            </h3>
+                            <p>
+                                CEO, Design specialist
+                            </p>
+                            <div class="social">
+                                <a href="#" class="social twitter"></a>
+                                <a href="#" class="social dribble"></a>
+                                <a href="#" class="social linkedin"></a>
+                                <a href="#" class="social googleplus"></a>
+                            </div>
+                        </li>
+                        
+                        <!-- ITEM -->
+                        
+                        <li>
+                            <a href="data/members/member2.jpg"><img src="data/members/member2.jpg" alt=""></a>
+                            <a href="#"></a>
+                            <h3>
+                                Jessica Doe
+                            </h3>
+                            <p>
+                                CEO, Branding & iOS designer
+                            </p>
+                            <div class="social">
+                                <a href="#" class="social facebook"></a>
+                                <a href="#" class="social twitter"></a>
+                                <a href="#" class="social dribble"></a>
+                                <a href="#" class="social linkedin"></a>
+                                <a href="#" class="social googleplus"></a>
+                            </div>
+                        </li>
+                        
+                        <!-- ITEM -->
+                        
+                        <li>
+                            <a href="data/members/member3.jpg"><img src="data/members/member3.jpg" alt=""></a>
+                            <a href="#"></a>
+                            <h3>
+                                Jane Doe
+                            </h3>
+                            <p>
+                                iOS specialist, marketing guru
+                            </p>
+                            <div class="social">
+                                <a href="#" class="social facebook"></a>
+                                <a href="#" class="social twitter"></a>
+                                <a href="#" class="social linkedin"></a>
+                            </div>
+                        </li>
+                        
+                        <!-- ITEM -->
+                        
+                        <li class="join">
+                            <a href="#"></a>
+                            <h3>
+                                Join us!
+                            </h3>
+                            <p>
+                                We found iOS development
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- ABOUT -->
+
+        <div id="about">
+            <div class="container">
+                <img src="data/about/office.jpg" alt="">
+                <div class="column">
+                    <h2>
+                        About us
+                    </h2>
+                    <p>
+                        Contrary to popular belief, Lorem Ipsum is not simply random text. has roots in a piece of classical Latin literature from 45 BC, making.
+                    </p>
+                    <ul>
+                        <li>
+                            Lorem Ipsum is simply dummy text of the printing.
+                        </li>
+                        <li>
+                            Industry's standard dummy text ever.
+                        </li>
+                        <li>
+                            Printer took a galley of type and scrambled it to make a type.
+                        </li>
+                    </ul>
+                    <div class="favorites">
+                        <h3>
+                            What we love:
+                        </h3>
+                        <img src="data/about/favorites.png" alt="">
+                    </div>
+                </div>
+                <div class="favorites">
+                    <h3>
+                        What we love:
+                    </h3>
+                    <img src="data/about/favorites.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <!-- CLIENTS -->
+
+        <div id="clients">
+            <div class="container">
+                <ul class="items">
+                    <li>
+                        <a href="#">
+                            <img src="data/clients/client1.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="data/clients/client2.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="data/clients/client3.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="data/clients/client4.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="data/clients/client1.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="data/clients/client2.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="data/clients/client3.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="data/clients/client4.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+
+        <div id="contact">
+            <div class="map"></div>
+            <h2>
+                Visit us. You are welcome.
+            </h2>
+            <div class="container">
+                <div class="box">
+                    
+                    <!-- INFO -->
+                    
+                    <ul>
+                        <li>
+                            <span class="ico phone"></span>&nbsp;<span><b>+970 897 580</b> (7:00 - 20:00)</span>
+                        </li>
+                        <li>
+                            <span class="ico email"></span>&nbsp;<a href="mailto:info@company.com">info@company.com</a>
+                        </li>
+                        <li class="address">
+                            <span class="ico address"></span>&nbsp;<b>USA</b>,  San Francisco, 57010, Little Parry St. 826/31
+                        </li>
+                    </ul>
+
+                    <!-- FORM -->
+                    
+                    <form>
+                        <input type="text" name="name" data-placeholder="Name...">
+                        <input type="text" name="budget" data-placeholder="Budget...">
+                        <br>
+                        <input type="text" name="email" data-placeholder="Email...">
+                        <input type="text" name="timeframe" data-placeholder="Timeframe">
+                        <br>
+                        <textarea data-placeholder="Message..."></textarea>
+                        <a href="#" class="button blue">
+                            Everything? Send!
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+
+        <div id="footer">
+            <div class="container">
+                <p>
+                    &copy; 2012 All Rights Reserved, Made with <span class="heart"></span> in Prague
+                </p>
+                <div class="social">
+                    <a href="#" class="social facebook"></a>
+                    <a href="#" class="social twitter"></a>
+                    <a href="#" class="social dribble"></a>
+                    <a href="#" class="social linkedin"></a>
+                    <a href="#" class="social googleplus"></a>
+                    <a href="#" class="social path"></a>
+                </div>
+            </div>
+        </div>
+		<script>
+			$.fn.mobiNav = function(){
+				$('.mobi_nav_layout').animate({opacity:0}, 0);
+				
+				$(this).click(function(){
+					var navLayout = $('.mobi_nav_layout');
+					if(navLayout.css('display') == 'none'){
+						$('.mobi_nav_layout').stop();
+						navLayout.css('display', 'block');
+						navLayout.animate({opacity:1}, 200);
+					} else {
+						navLayout.stop();
+						navLayout.animate({opacity: 0}, 200,function(){ navLayout.css('display', 'none'); })
+					}
+				})
+				$('.mobi_nav_layout').click(function(){
+					$('.mobi_nav_layout').stop();
+					$('.mobi_nav_layout').animate({opacity:0}, 200, function(){ $('.mobi_nav_layout').css('display', 'none'); });
+				})
+			}
+			$('#mobi_button').mobiNav();
+			$('#mobi_button').hover(function(){
+				$(this).css('background-position', '59px');
+			},function(){
+				$(this).css('background-position', '0px');
+			});
+		</script>
+    </body>
+</html>

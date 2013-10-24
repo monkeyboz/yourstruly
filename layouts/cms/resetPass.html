@@ -1,0 +1,30 @@
+<style>
+	.holder{
+		clear: both;
+		margin-bottom: 10px;
+	}
+	label{
+		width: 210px;
+	}
+	h2{
+		margin: 0px;
+		padding: 0px;
+		margin-bottom: 20px;
+	}
+	.error{
+		color: #ff0000;
+		font-size: 11px;
+	}
+</style>
+<form action="" method="POST">
+	<h2>Enter your new Password</h2>
+	<div class="holder">
+		<label>Enter New Password</label>
+		<input name="new_password" type="password"/><span class="error">[error_new_password]</span>
+	</div>
+	<div class="holder">
+		<label>Re-enter New Password</label>
+		<input name="re_new_password" type="password"/><span class="error">[error_re_new_password]</span>
+	</div>
+	<input name="submit" value="submit" type="submit"/>
+</form>

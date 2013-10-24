@@ -1,0 +1,250 @@
+body {
+    background: none repeat scroll 0 0 #DFE8EC;
+    color: #525252;
+    font-family: Verdana,Geneva,sans-serif;
+    margin: 0;
+}
+h1, h2, h3, h4 {
+    font-family: 'Puritan';
+    text-transform: uppercase;
+}
+a {
+    color: #F21266;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+input, textarea{
+	border: 1px solid #efefef;
+	border-radius: 10px;
+	padding: 5px;
+	width: 100%;
+}
+.img{
+	width: 100%;
+}
+.subhead{
+	margin-top: 20px;	
+}
+.container {
+    margin: 20px;
+    padding-top: 100px;
+	border-bottom: #333;
+}
+.five{
+	clear: both;
+}
+.fiveColumns{
+	float: left;
+	width: 360px;
+	margin-right: 10px;
+}
+#contact{
+	clear: both;
+	font-size: 11px;
+	margin-bottom: 10px;
+}
+.columnRight p{
+	font-size: 11px;
+}
+label{
+	float: left;
+    font-size: 11px;
+    margin: 10px 0;
+    width: 100px;
+	font-weight: bold;
+}
+input, textarea{
+	border-radius: 10px;
+	border: 1px solid #ababab;
+	width: 100%;
+	padding: 5px;
+}
+.sectionBackground{
+	padding: 10px;
+}
+.columnLeft{
+	width: 350px;
+	float: left;
+	margin-right: 20px;
+}
+.columnLeft div{
+	clear: both;
+}
+.columnRight{
+	width: 300px;
+	float: left;
+}
+#footer {
+    background: none repeat scroll 0 0 #666666;
+    border-top: 1px solid #CCCCCC;
+    bottom: 0px;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+}
+#nav {
+    font-size: 11px;
+    text-align: center;
+}
+#nav a {
+    background-image: -moz-linear-gradient(center bottom , #FFFFFF 48%, #F5F5F5 100%);
+    border: 1px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+    color: #333333;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 10px;
+}
+.clear {
+    clear: both;
+}
+.one-thirds {
+    font-size: 11px;
+}
+.slideHolder {
+    height: 300px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.slideDescript {
+    background: none repeat scroll 0 0 #fff;
+    bottom: 30px;
+    padding: 10px;
+    position: absolute;
+}
+
+.slide_img {
+    width: 100%;
+}
+.container {
+    clear: both;
+}
+.youtube {
+    background: none repeat scroll 0 0 #000000;
+    border: 10px solid #FFFFFF;
+    box-shadow: 0 2px 5px #ABABAB;
+    padding: 10px;
+}
+h1 {
+    margin: 0 0 10px;
+}
+.tabHolder a {
+    font-family: 'Puritan';
+    padding: 10px;
+}
+.imageHolder {
+    background: none repeat scroll 0 0 #000000;
+    border: 10px solid #FFFFFF;
+    box-shadow: 0 2px 5px #ABABAB;
+    margin-top: 20px;
+    padding: 10px;
+}
+.tabContentHolder {
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin-top: 10px;
+    padding: 10px;
+}
+.tabHolder .selected {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+.tabHolder a {
+    color: #333333;
+    font-weight: bold;
+}
+#tabContainer {
+    background: none repeat scroll 0 0 #CCD7DD;
+    padding: 20px;
+}
+.fixed {
+	position: fixed;
+}
+@media screen and (min-width: 0px) {
+	#slider {
+		border: 10px solid #FFFFFF;
+		box-shadow: 0 2px 5px #ABABAB;
+		width: 92%;
+		position: relative;
+		clear: both;
+		margin: 20px auto;
+	}
+	#top_wrapper {
+		background-image: -moz-linear-gradient(center bottom , #D9D9D9 0%, #FFFFFF 72%);
+		border-radius: 15px 15px 15px 15px;
+		box-shadow: 0 1px 5px #BACBD3;
+		clear: both;
+		color: #CCCCCC;
+		margin: 0 auto;
+		padding: 20px;
+		text-align: center;
+		width: 80%;
+		z-index: 100;
+		top: 30px;
+	}
+	#logo {
+		clear: both;
+		display: block;
+		margin: 10px 0;
+		text-align: center;
+		width: 100%;
+	}
+	#nav a {
+		display: block;
+		padding: 10px;
+	}
+	.one-thirds {
+		width: 100%;
+	}
+	#container {
+		width: 100%;
+	}
+	.youtube {
+		
+	}
+}
+@media screen and (min-width:601px) {
+	#slider {
+		height: 300px;
+		margin-top: 20px;
+		position: relative;
+	}
+	#top_wrapper {
+		background-image: -moz-linear-gradient(center bottom , #D9D9D9 0%, #FFFFFF 72%);
+		border-radius: 15px 15px 15px 15px;
+		box-shadow: 0 1px 5px #BACBD3;
+		clear: both;
+		color: #CCCCCC;
+		margin: 0 auto;
+		padding: 20px;
+		text-align: center;
+		max-width: 750px;
+		min-width: 550px;
+		z-index: 1;
+	}
+	#logo {
+		float: left;
+		width: 100px;
+	}
+	#nav a {
+		display: inline;
+	}
+	.one-thirds {
+		float: left;
+		line-height: 20px;
+		width: 32%;
+	}
+	.middle {
+		margin: 0 2%;
+	}
+	#container {
+		margin: 0 auto;
+		max-width: 800px;
+		min-width: 600px;
+	}
+	.youtube {
+		clear: both;
+		margin: 0 auto;
+		width: 600px;
+	}
+}

@@ -1,0 +1,40 @@
+<style>
+	body{
+		font-family: verdana;
+		font-size: 11px;
+	}
+	.actions a{
+		float: left;
+		margin-right: 10px;
+	}
+	.layout{
+		width: 400px;
+		float: left;
+		margin-right: 20px;
+	}
+	.odd{
+		background: #efefef;
+	}
+	.content{
+		padding: 10px;
+		border-bottom: 1px solid #efefef;
+	}
+</style>
+<div class="layout">
+	<h2>Revisions in System</h2>
+	<div>[revisions]</div>
+</div>
+<div class="layout">
+	<h2>New Layouts</h2>
+	<div>[new_layouts]</div>
+</div>
+<script>
+	$('.delete').click(function(){
+		var answer = confirm('Are you sure you want to delete');
+		if(answer){
+			return true;
+		} else {
+			return false;
+		}
+	})
+</script>
