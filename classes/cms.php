@@ -9,8 +9,8 @@
 		var $debug;
 		
 		var $host = 'localhost';
-		var $username = 'monkeyboz';
-		var $password = 'ntisman1';
+		var $username = 'testing';
+		var $password = 'testing';
 		var $database = 'yourstruly';
 		var $connect;
 		
